@@ -1,0 +1,59 @@
+console.log('Assignment 1 ======= Start')
+var given=[10,20,30,40,50];
+
+function squareRoot(arr) {
+    let squareIt = [];
+    console.log(arr);
+    for(let count = 0;  count < arr.length; count++){
+        squareIt.push(arr[count] * arr[count]); 
+    }
+    return squareIt;
+}
+
+console.log(` given ${given} this is the square root ${squareRoot(given)}`);
+
+console.log('Assignment 1 ======= End')
+
+
+console.log('Assignment 2 ======= Start');
+
+var phoneNumber = '12345678901'
+
+function maskPhonumber(nbr){
+    
+    let start = nbr.slice(0,3);
+    let mask = '****';
+    let end  = nbr.slice(8,nbr.length);
+    return start + mask + end;
+
+}
+
+console.log(`Phone number given ${phoneNumber} after mask ${maskPhonumber(phoneNumber)}`);
+console.log('Assignment 2 ======= End');
+
+console.log('Assignment 3 ======= Start');
+
+var empArr=[
+{empId:101,empName:"Asha",salary:1001,deptId:"D1"},
+{empId:102,empName:"Gaurav",salary:2000,deptId:"D1"},
+{empId:103,empName:"Karan",salary:2000,deptId:"D2"},
+{empId:104,empName:"Kishan",salary:3000,deptId:"D1"},
+{empId:105,empName:"Keshav",salary:3500,deptId:"D2"},
+{empId:106,empName:"Pran",salary:4000,deptId:"D3"},
+{empId:107,empName:"Saurav",salary:3800,deptId:"D3"}
+];
+
+function findTheHighestSalary(employee) {
+    
+    let sorted = employee.sort((a,b)=> {
+             return b.salary - a.salary    
+    });
+
+    return JSON.stringify(sorted[0]);
+
+}
+
+console.log(`The employee with highest salary is ${findTheHighestSalary(empArr)}`);
+
+
+console.log('Assignment 3 ======= end');
